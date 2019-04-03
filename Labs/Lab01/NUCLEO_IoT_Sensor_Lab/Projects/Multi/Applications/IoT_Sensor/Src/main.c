@@ -105,8 +105,8 @@ void enableAllSensors(void);
  */
 int main(void)
 {
-  const char *name = "BlueNRG";
-  uint8_t SERVER_BDADDR[] = {0xXX, 0x34, 0x00, 0xE1, 0x80, 0x03};
+  const char *name = "G5";
+  uint8_t SERVER_BDADDR[] = {0x05, 0x34, 0x00, 0xE1, 0x80, 0x03};
   uint8_t bdaddr[BDADDR_SIZE];
   uint16_t service_handle, dev_name_char_handle, appearance_char_handle;
 

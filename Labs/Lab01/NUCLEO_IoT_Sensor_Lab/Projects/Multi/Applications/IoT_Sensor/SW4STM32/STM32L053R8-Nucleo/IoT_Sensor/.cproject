@@ -23,7 +23,7 @@
 							<builder autoBuildTarget="all" buildPath="${workspace_loc:/IoT_Sensor}/Debug" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.90626016" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
 							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.1797278495" name="MCU GCC Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler">
 								<option defaultValue="gnu.c.optimization.level.none" id="fr.ac6.managedbuild.gnu.c.compiler.option.optimization.level.1431256198" name="Optimization Level" superClass="fr.ac6.managedbuild.gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="fr.ac6.managedbuild.gnu.c.optimization.level.size" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.debugging.level.1441706582" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1441706582" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.minimal" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.970946611" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${PWD}/../../../../Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PWD}/../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes&quot;"/>
@@ -50,6 +50,7 @@
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.635235246" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
 								<option id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.nolink.585534770" name="Compile and assemble, but do not link (-c)" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.nolink" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.fdata.1957774103" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.fdata" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1117891639" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.1766993200"/>
 								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.c.1880364432" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.c"/>

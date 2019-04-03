@@ -115,6 +115,8 @@ do {\
     BSP_HUMIDITY_Init( HTS221_H_0, &HUMIDITY_handle );
     /* Force to use HTS221 */
     BSP_TEMPERATURE_Init( HTS221_T_0, &TEMPERATURE_handle );
+    /* Forse to use LSM6DSL */
+    BSP_ACCELERO_Init(LSM6DSL_X_0, &ACCELERO_handle);
   }
 
   /**
@@ -126,6 +128,7 @@ do {\
   {
     BSP_HUMIDITY_Sensor_Enable( HUMIDITY_handle );
     BSP_TEMPERATURE_Sensor_Enable( TEMPERATURE_handle );
+    BSP_ACCELERO_Sensor_Enable( ACCELERO_handle );
   }
 
 
@@ -181,6 +184,39 @@ tBleStatus Add_Environmental_Sensor_Service(void)
                                FALSE,
                                &descHandle);
   if (ret != BLE_STATUS_SUCCESS) goto fail;
+
+  /* ACCELERO Characteristic */
+    COPY_ACC_SERVICE_UUID(uuid);
+    ret =  aci_gatt_add_char(envSensServHandle, UUID_TYPE_128, uuid, 2,
+                             CHAR_PROP_READ, ATTR_PERMISSION_NONE,
+                             GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
+                             16, 0, &accCharHandle);
+    if (ret != BLE_STATUS_SUCCESS) goto fail;
+
+    charFormat.format = FORMAT_SINT16;
+    charFormat.exp = -1;
+    charFormat.unit = UNIT_TEMP_CELSIUS;
+    charFormat.name_space = 0;
+    charFormat.desc = 0;
+
+    uuid16 = CHAR_FORMAT_DESC_UUID;
+
+    ret = aci_gatt_add_char_desc(envSensServHandle,
+                                 accCharHandle,
+                                 UUID_TYPE_16,
+                                 (uint8_t *)&uuid16,
+                                 7,
+                                 7,
+                                 (void *)&charFormat,
+                                 ATTR_PERMISSION_NONE,
+                                 ATTR_ACCESS_READ_ONLY,
+                                 0,
+                                 16,
+                                 FALSE,
+                                 &descHandle);
+    if (ret != BLE_STATUS_SUCCESS) goto fail;
+
+
 
   /* Humidity Characteristic */
   if(1){   //FIXME
