@@ -1,0 +1,1 @@
+docker build -t /home/osboxes/workspace/ProjetIotYnov/Labs/Lab04:lab04
