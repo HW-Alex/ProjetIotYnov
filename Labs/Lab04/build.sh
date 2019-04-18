@@ -1,1 +1,3 @@
-docker build -t /home/osboxes/workspace/ProjetIotYnov/Labs/Lab04:lab04
+#!/bin/bash
+
+docker build -t /home/$USER:lab04

@@ -1,1 +1,3 @@
-ocker run -dit --restart unless-stopped lab04
+#!/bin/bash
+
+docker run -dit --restart unless-stopped lab04
