@@ -1,0 +1,1 @@
+ocker run -dit --restart unless-stopped lab04
