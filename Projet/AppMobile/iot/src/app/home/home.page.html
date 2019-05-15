@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      PoTech
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table class="ps">
+    <tr>
+      <td></td>
+      <td> <ion-button size="large"  (touchstart)="avance()" (touchend)="stp()"><i class="fas fa-arrow-circle-up"></i></ion-button></td>
+      <td></td>
+    </tr>
+      <tr>
+      <td> <ion-button size="large" (touchstart)="left()" (touchend)="stp()"><i class="fas fa-arrow-circle-left"></i></ion-button></td>
+      <td></td>
+      <td> <ion-button  size="large" (touchstart)="right()" (touchend)="stp()"><i class="fas fa-arrow-circle-right"></i></ion-button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> <ion-button size="large" (touchstart)="back()" (touchend)="stp()"><i class="fas fa-arrow-circle-down"></i></ion-button></td>
+      <td></td>
+    </tr>
+  </table>
+</ion-content>
